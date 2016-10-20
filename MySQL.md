@@ -1,16 +1,16 @@
-##  Servidor de base de datos MySQL
+# Servidor de base de datos MySQL
 
-Para este caso usaremos la implementación de MariaDB
+<p style="font-size: 16px;">Para este caso usaremos la implementación de MariaDB</p>
 
 ### 1. Instalar
 
 ** Archlinux **
-```
+```bash
 $ sudo pacman mariadb
 ```
 
 ** Ubuntu Server 16.04 **
-```
+```bash
 $ sudo apt install mariadb-client mariadb-server
 ```
 
@@ -21,7 +21,7 @@ $ sudo apt install mariadb-client mariadb-server
 ### 2. Iniciar servicio
 
 ** Archlinux **
-```
+```bash
 # Para iniciar el servidor
 $ sudo systemctl start mariadb.service
 # Para habilitar el inicio automático del servidor
@@ -29,7 +29,7 @@ $ sudo systemctl enable mariadb.service
 ```
 
 ** Ubuntu Server 16.04 **
-```
+```bash
 # Para iniciar el servidor
 $ sudo service mariadb.service start
 # Para habilitar el inicio automático del servidor
@@ -39,12 +39,12 @@ $ sudo service mariadb.service enable
 ### 3. Securizar el servidor
 
 ** Archlinux **
-```
+```bash
 $ sudo mysql_secure_installation
 ```
 
 ** Ubuntu Server 16.04 **
-```
+```bash
 $ sudo mysql_secure_installation
 ```
 
@@ -65,7 +65,7 @@ Funciona igual para ambas plataformas
 
 Ejecutar si ha actualizado MariaDB de 5.5 a 10.0 ó 10.0 a 10.1
 
-```
+```bash
 $ mysql_upgrade -u root -p
 ```
 
