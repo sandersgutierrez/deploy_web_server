@@ -6,7 +6,7 @@
 
 ** Archlinux **
 ```bash
-$ sudo pacman mariadb
+$ sudo pacman -S mariadb
 ```
 
 ** Ubuntu Server 16.04 **
@@ -36,7 +36,7 @@ $ sudo service mariadb.service start
 $ sudo service mariadb.service enable
 ```
 
-### 3. Securizar el servidor
+### 3. Segurizar el servidor
 
 ** Archlinux **
 ```bash
@@ -56,7 +56,7 @@ Funciona igual para ambas plataformas
 | Set root password? [Y/n] | ** Y o Enter ** para aceptar colocar contraseña al usuario root |
 | New password:| * Escriba la nueva contraseña * |
 | Re-enter new password: | * Repita la contraseña que escribió arriba * |
-| Remove anonymous users? [Y/n] | ** Yo Enter ** para eliminar el usuario anonymous |
+| Remove anonymous users? [Y/n] | ** Y o Enter ** para eliminar el usuario anonymous |
 | Disallow root login remotely? [Y/n] | ** Y o Enter ** para desactivar el inicio de sesión remoto para el usuario root |
 | Remove test database and access to it? [Y/n] | ** Y o Enter ** para eliminar la base de datos de prueba ** ++ Test ++ ** |
 | Reload privilege tables now? [Y/n] | ** Y o Enter ** para recargar la tabla de permisos del servidor |
