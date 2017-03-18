@@ -1,6 +1,6 @@
 # Servidor de base de datos MongoDB
 
-<p style="font-size: 16px;">Instalación y configuración de MongoDB en Archlinux / Ubuntu</p>
+<p style="font-size: 16px;">Instalación y configuración de MongoDB en Archlinux / Ubuntu 16.04</p>
 
 ### 1. Instalar
 
@@ -10,13 +10,46 @@
 $ sudo pacman -S mongodb
 ```
 
-### 3. Arrancar y habilitar servicio
+#### Ubuntu
+
+1. Importar clave pública
+```bash
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+```
+2. Crear archivo .list para agregar repositorio de MongoDB
+```bash
+$ sudo echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+```
+
+3. Recargar la base de datos local de paquetes
+```bash
+sudo apt update
+```
+
+4. Instalar metapaquete mongodb-org
+```bash
+sudo apt install -y mongodb-org
+```
+
+
+### 3. Arrancar y habilitar arranque automático del servicio
+
+#### Archlinux
 
 ```bash
 # Iniciar servicio
 $ sudo systemctl start mongodb.service
 # Iniciar habilitar inicio automático con el sistema
 $ sudo systemctl enable mongodb.service
+```
+
+#### Ubuntu
+
+```bash
+# Iniciar servicio
+$ sudo systemctl start mongod.service
+# Iniciar habilitar inicio automático con el sistema
+$ sudo systemctl enable mongod.service
 ```
 
 ### 3. Arreglando Problemas
